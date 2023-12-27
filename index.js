@@ -32,18 +32,19 @@ style.innerHTML = `
   .lyrics-wrapper {
     display: flex;
     position: fixed;
-    width: 100%;
+    width: 99%;
     height: 100%;
     z-index: 100;
     align-items: flex-end;
     justify-content: right;
-    padding-bottom: 2em;
+    padding-bottom: 1%;
     pointer-events: none;
     bottom: var(--ytmusic-player-bar-height);
   }
   .lyrics-wrapper.fullscreen {
     bottom: 0;
     padding-bottom: 0;
+    width: 100%;
   }
   .lyrics-wrapper.hidden {
     display: none;
@@ -52,8 +53,8 @@ style.innerHTML = `
     scroll-behavior: smooth;
     background: radial-gradient(circle, rgba(0,0,0,0.3981967787114846) 50%, rgba(0,0,0,0) 100%);
     backdrop-filter: blur(50px);
-    height: 600px;
-    width: 400px;
+    height: calc(96% - var(--ytmusic-player-bar-height) - var(--ytmusic-nav-bar-height));
+    width: 500px;
     overflow: scroll;
     color: white;
     box-shadow: 0 4px 12px 4px rgba(0,0,0,.5);
@@ -69,8 +70,8 @@ style.innerHTML = `
     background: radial-gradient(circle, rgba(0,0,0,0.3981967787114846) 50%, rgba(0,0,0,0) 100%);
   backdrop-filter: blur(50px);
     width: 100%;
-    height: 93%;
-    margin-bottom: 4.3%;
+    height: calc(100% - var(--ytmusic-nav-bar-height));
+    margin-bottom: calc(var(--ytmusic-player-bar-height) - 0.5%);
   }
   ul.lyrics-list {
     text-align: center;
@@ -98,6 +99,7 @@ ul.lyrics-list li.active {
     font-size: 1.0em;
     margin: 0em;
     text-shadow: 2px 2px 4px rgba(0.9, 0.9, 0.9, 0.9);
+    opacity: 1;
 }
   .lyrics-delay {
     position: absolute;
