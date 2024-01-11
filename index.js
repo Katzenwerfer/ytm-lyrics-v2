@@ -402,13 +402,13 @@ function setup() {
         delayMs += 100
 
       delayEl.innerText = `Delay: ${delayMs / 1000}s`
-      delayTimeout = setTimeout(() => delayEl.innerText = '', 1000)
+      delayTimeout = setTimeout(() => delayEl.innerText = '', 2000)
     }
     else if (e.keyCode === 90 /* Z */) {
       autoScroll = !autoScroll
 
       delayEl.innerText = `Autoscroll ${autoScroll ? 'enabled' : 'disabled'}`
-      delayTimeout = setTimeout(() => delayEl.innerText = '', 1000)
+      delayTimeout = setTimeout(() => delayEl.innerText = '', 2000)
     }
     else if (e.keyCode === 27 /* Escape */) {
       wrapperEl.classList.remove('fullscreen')
